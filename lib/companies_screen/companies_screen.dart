@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/company_data.dart';
-import '../design/dimensions.dart';
+import '../theme/dimensions.dart';
 import '../theme/Strings.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,7 +14,7 @@ class CompaniesScreen extends StatelessWidget {
           backgroundColor: Colors.black87,
           centerTitle: true,
           title: const Text(
-            companiesList,
+            companiesListText,
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -38,7 +38,7 @@ class CompaniesScreen extends StatelessWidget {
                     height: height40,
                   ),
                   title: Text(company.title),
-                  subtitle: Text(warehouseCount),
+                  subtitle: Text(warehouseCountText),
                   onTap: (){
                     Navigator.pushNamed(
                       context,
