@@ -76,7 +76,10 @@ class _CompaniesScreenState extends State<CompaniesScreen> {
                         Navigator.pushNamed(
                           context,
                           '/warehouses',
-                          arguments: company.title,
+                          arguments: {
+                            'title': company.title,
+                            'image': company.image,
+                          },
                         );
                       },
                     ),

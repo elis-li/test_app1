@@ -5,3 +5,7 @@ const double radius6 = 6;
 const double width40 = 40;
 const double height40 = 40;
 const double padding10 = 10.0;
+const double width25 = 25;
+const double height25 = 25;
+const double width10 = 10;
+const double width80 = 80;
