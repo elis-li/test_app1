@@ -6,3 +6,4 @@ const String camomileText = "Ромашка";
 const String knapweedText = "Василек";
 const String companiesListText = "Список компаний";
 String warehouseCountText = sprintf('Количество складов: %d', [count]);
+const String enterTextHint = "Введите название компании или адрес";
