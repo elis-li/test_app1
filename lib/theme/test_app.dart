@@ -7,9 +7,11 @@ class TestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Test App',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primaryColor: Colors.black,
+        scaffoldBackgroundColor: Colors.white,
       ),
       routes: routes,
     );
