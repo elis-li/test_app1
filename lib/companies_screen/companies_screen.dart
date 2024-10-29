@@ -13,7 +13,6 @@ class CompaniesScreen extends StatefulWidget {
 
 class _CompaniesScreenState extends State<CompaniesScreen> {
   final TextEditingController _controller = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,41 +54,41 @@ class _CompaniesScreenState extends State<CompaniesScreen> {
           Expanded(
             child: Container(
               color: Colors.black87,
-              child: ListView.separated(
-                itemCount: companies.length,
-                itemBuilder: (context, index) {
-                  final company = companies[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(radius6),
-                    ),
-                    child: ListTile(
-                      leading: SvgPicture.asset(
-                        company.image,
-                        width: width40,
-                        height: height40,
+              child: Padding(
+                padding: const EdgeInsets.all(padding8),
+                child: ListView.separated(
+                  itemCount: companies.length,
+                  itemBuilder: (context, index) {
+                    final company = companies[index];
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(radius6),
                       ),
-                      title: Text(company.title),
-                      subtitle: Text(warehouseCountText),
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/warehouses',
-                          arguments: {
-                            'title': company.title,
-                            'image': company.image,
+                        child: ListTile(
+                          leading: SvgPicture.asset(
+                            company.image,
+                            width: width40,
+                            height: height40,
+                          ),
+                          title: Text(company.title),
+                          subtitle: Text(warehouseCountText(company)),
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/warehouses',
+                              arguments: company,
+                            );
                           },
-                        );
-                      },
-                    ),
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(
-                    height: height6,
-                  );
-                },
+                        ),
+                      );
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return const SizedBox(
+                      height: height6,
+                    );
+                  },
+                ),
               ),
             ),
           ),

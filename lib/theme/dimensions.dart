@@ -9,3 +9,5 @@ const double width25 = 25;
 const double height25 = 25;
 const double width10 = 10;
 const double width80 = 80;
+const double opacity03 = 0.3;
+const double padding8 = 8.0;
