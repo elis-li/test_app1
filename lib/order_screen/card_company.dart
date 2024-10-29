@@ -12,7 +12,7 @@ class CardCompany extends StatelessWidget{
     final Company company =
     ModalRoute.of(context)!.settings.arguments as Company;
       return Container(
-        height: height40,
+        height: 80,
         padding: const EdgeInsets.all(padding10),
         color: Colors.black87,
         child: Row(
@@ -32,8 +32,14 @@ class CardCompany extends StatelessWidget{
               company.title,
               style: const TextStyle(color: Colors.white),
             ),
+            const SizedBox(
+              width: width10,
+            ),
             Text(
                 warehouseCountText(company),
+              style: const TextStyle(
+                color: Colors.white60,
+              ),
             )
           ],
         ),

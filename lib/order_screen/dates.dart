@@ -12,12 +12,7 @@ class DatesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(color: Colors.white60),
-      ),
-      body: SingleChildScrollView(
+    return  SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: dates.map((date) {
@@ -43,7 +38,6 @@ class DatesScreen extends StatelessWidget {
             );
           }).toList(),
         ),
-      ),
-    );
+      );
   }
 }
